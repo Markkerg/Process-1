@@ -1,46 +1,37 @@
 # คำสั่ง`kill`
-เป็นคำสั่งที่แสดงข้อมูลเกี่ยวกับ processes ที่กำลังทำงานอยู่ในระบบ
+เป็นคำสั่งที่ใช้เพื่อส่งสัณณาณไปยัง process เพื่อทำลายการทำงาน โดยเฉพาะอย่างยิ่งตอนที่ process ไม่มีการตอบสนองหรือใช้ทรัพยากรระบบมากเกินไป
 |อาร์กิวเมนต์|คำอธิบาย|ตัวอย่าง|
 |---|-----------|-----|
-|`-A` หรือ `-e`|แสดงข้อมูลเกี่ยวกับ processes ทั้งหมด|`ps -A` หรือ `ps -e`|
-|`-f`|แสดงข้อมูลแบบ full-format|`ps -f`|
-|`-l`|แสดงข้อมูลแบบ long format|`ps -l`|
-|`-j`|แสดงข้อมูลแบบ jobs format.|`ps -j`|
-|`-o`|แสดงข้อมูลแบบ User-defined format|`ps -o pid,comm`|
-|`-p`|แสดงข้อมูลที่เลือกโดย PID|`ps -p 1234`|
-|`-t`|แสดงข้อมูลที่เลือกโดย TTY|`ps -t pts/1`|
-|`-u`|แสดงข้อมูลที่เลือกโดย effective user ID (EUID).|`ps -u root`|
-|`-x`|แสดงข้อมูลโดยไม่ต้องควบคุม terminal (เหมือน daemons)|`ps -x`|
-|`-C`|แสดงข้อมูลที่เลือกโดย command name|`ps -C bash`|
-|`-L`|แสดงข้อมูล threads โดยอาจมีคอลัมท์ LWP and NLWP|`ps -L`|
+|`-SIGTERM`|ร้องขอให้ทำลาย process แต่สามารถให้ล้างข้อมูลก่อนได้|`kill -SIGTERM 1234`|
+|`-SIGKILL`|บังคับทำลาย process ทันที|`kill -SIGKILL 1234`|
+|`-SIGSTOP`|หยุดการดำเนินการของ process ชั่วคราว|`kill -SIGSTOP 1234`|
+|`-SIGCONT`|ดำเนินการ process ที่หยุดไว้|`kill -SIGCONT 1234`|
+|`-SIGHUP`|ส่งสัญญาณไปยัง process เมื่อมีการปิดการควบคุม terminal|`kill -SIGHUP 1234`|
+|`-SIGINT`|ส่งสัญญาณ interrupt ไปส่วนใหญ่จะเป็นผู้ใช้|`kill -SIGINT 1234`|
+|`-SIGQUIT`|ส่งสัญญาณ quit ไปมักเป็นผลมาจาก core dump|`kill -SIGQUIT 1234`|
+|`-SIGABRT`|ส่งสัญญาณ abort ไปมักเป็นผลมาจาก core dump|`kill -SIGABRT 1234`|
+|`-SIGALRM`|ใช้ในการตั้งเตือนหรือนับเวลา|`kill -SIGALRM 1234`|
+|`-SIGUSR1` และ `-SIGUSR2`|ผู้ใช้เป็นคนกำหนดการส่งสัญญาณ|`kill -SIGUSR1 1234`|
+## คำสั่ง`kill`ในรูปแบบต่างๆ
+|วิธีการ|คำอธิบาย|ใช้ในกรณี|
+|---|-----------|-----|
+|`kill`|ทำลาย processes ด้วย PID|เมื่อรู้ PID ของ process|
+|`pkill`|ทำลาย processes ด้วย ชื่อ|เมื่อรู้ ชื่อ ของ process|
+|`killall`|ทำลาย instances ของ processes ทั้งหมด|เมื่อต้องการทำลายinstances ของ process ทั้งหมด|
+|`xkill`|ทำลาย processes ในส่วนของ graphically |เมื่อต้องจัดการกับ graphical application ที่ไม่ตอบสนอง|
 ## ตัวอย่างการนำไปใช้
-- แสดง process ที่ทำงานอยู่ในปัจจุบัน
-> ps
-
-![ps.png](../../Assets/ps/ps.png)
-- แสดงทุก process ที่ทำงานอยู่ในระบบ
-> ps -A หรือ ps -e
+- ในการนำไปใช้งานเราสามารถใช้คำสั่ง`ps` หรือ`ps -A`เพื่อดู process ที่ต้องกการจะทำลายการทำงานของมันได้และใช้คำสั่ง`kill`ต่างๆเพื่อจบการทำงาน
+![ps-A.png](../../Assets/ps/ps-A.png)
+- ในกรณีที่ไม่สามารถดำเนินการทำลาย processes ได้เนื่องจาก Operation not permitted
+![ps-A.png](../../Assets/ps/ps-A.png)
+> สามารถแก้ได้โดยการใช้ `sudo kill` เพื่อเเป็นขอสิทธิ์ในการแก้ไข
 
 ![ps-A.png](../../Assets/ps/ps-A.png)
-- แสดงทุก process ที่ทำงานอยู่ในระบบและแสดงแบบ full-format
-> ps -ef หรือ ps -eF
+- ในกรณีที่ไม่สามารถดำเนินการทำลาย processes ได้เนื่องจาก No such process
+![ps-A.png](../../Assets/ps/ps-A.png)
+> แสดงว่า process PID นี้ไม่มีอยู่ สามารถแก้ได้โดยการใช้`ps` หรือ`ps -A`เพื่อดู PID ของ process ที่ต้องการแก้ไขให้ถูกต้อง
+ทั้งนี้ทั้งนั้นเมื่อใช้คำสั่ง`kill`แล้วไม่มี outputอะไรออกมา ไม่ต้องตกใจนั้นแสดงว่าคำสั่ง`kill`ได้ดำเนินเสร็จสิ้นเรียบร้อยแล้ว
 
-![ps-ef.png](../../Assets/ps/ps-ef.png)
-- แสดงข้อมูลแบบที่ผู้ใช้เป็นคนกำหนด output format เอง เช่นอยากเห็น PID, user, และคำสั่งในแต่ละ process
-> ps -e -o pid,user,comm
-
-![ps-e-o.png](../../Assets/ps/ps-e-o.png)
-- แสดงข้อมูลที่เลือก processes จาก PID เช่นอยากเห็นรายละเอียดของ process ที่มี PID 410 หรือแสดงแบบหลายๆ PID ได้
-> ps -fp 410
-
-![ps-fp410.png](../../Assets/ps/ps-fp410.png)
-> ps -fp 369,577,616
-
-![ps-fp369.png](../../Assets/ps/ps-fp369.png)
-- แสดง process แบบ tree จะเห็นการเชื่อมโยงของ process ที่ทำงานร่วมกัน
-> ps -e --forest
-
-![ps-e--forest.png](../../Assets/ps/ps-e--forest.png)
 ***
 # แหล่งอ้างอิง
 - https://ioflood.com/blog/ps-linux-command/
