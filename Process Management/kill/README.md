@@ -28,13 +28,15 @@
 
 ![kill 630.png](../../Assets/kill/kill630.png)
 - ในกรณีที่ไม่สามารถดำเนินการทำลาย processes ได้เนื่องจาก Operation not permitted
+
 ![kill410.png](../../Assets/kill/kill410.png)
 > สามารถแก้ได้โดยการใช้ `sudo kill` เพื่อเเป็นขอสิทธิ์ในการแก้ไข
 
 ![killsudo.png](../../Assets/kill/killsudo.png)
 - ในกรณีที่ไม่สามารถดำเนินการทำลาย processes ได้เนื่องจาก No such process
+
 ![kill610.png](../../Assets/kill/kill610.png)
-> แสดงว่า process PID นี้ไม่มีอยู่ สามารถแก้ได้โดยการใช้`ps` หรือ`ps -A`เพื่อดู PID ของ process ที่ต้องการแก้ไขให้ถูกต้อง
+> แสดงว่า process PID นี้ไม่มีอยู่ สามารถแก้ได้โดยการใช้`ps` หรือ`ps -A`เพื่อดู PID ของ process ที่ต้องการแก้ไขให้ถูกต้อง  
 ทั้งนี้ทั้งนั้นเมื่อใช้คำสั่ง`kill`แล้วไม่มี outputอะไรออกมา ไม่ต้องตกใจนั้นแสดงว่าคำสั่ง`kill`ได้ดำเนินเสร็จสิ้นเรียบร้อยแล้ว
 
 ***
