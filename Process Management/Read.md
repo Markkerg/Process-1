@@ -1,36 +1,40 @@
-# Process Manaagement คืออะไร
-Process Management คือ งานในการควบคุมและติดตาม processesที่ทำงานอยู่บนระบบ Linux โดยรวมไปถึงกระบวนการจัดการทรัพยากร, การจัดลำดับการทำงานบน CPU, และการยกเลิกกระบวนการเมื่อจำเป็น
-## คำสั่งของ Process Management ใน Linux
-|คำสั่ง|คำอธิบาย|
-|----|--------------|
-|ps|แสดงข้อมูลเกี่ยวกับ processes ที่ทำงานอยู่|
-|top|ให้ข้อมูลแบบ real-time เกี่ยวกับ processes ระบบและทรัพยากรที่ถูกใช้งาน|
-|kill|ทำลาย process นั้นโดยการส่งสัญญาณไปยัง process นั้น|
-|nice|ปรับลำดับความสำคัญของ process|
-|renice|เปลี่ยนลำดับความสำคัญของ process ที่กำลังทำงานอยู่|
-|ps PID|แสดงสถานะของ process ที่มีความแน่ชัด|
-|pidof|แสดงหมายเลข ID ของ process|
-|df|แสดง Disk Management ในระบบ|
-|free|แสดงสถานะของ RAM|
-|bg|สำหรับการส่ง process ที่กำลังทำงานไป background|
-|fg|สำหรับการส่ง process ที่กำลังทำงานไป foreground|
-## Process Management ในทางปฏิบัติ
-### การระบุและการยุติ processes ใน Linux
-การระบุและการยุติ processes สามารถทำได้โดยใช้คำสั่งเหล่านี้ใน Linux
-คำสั่ง`PS`ใช้ในการหา process ID (PID) ของ process ที่ต้องการจัดการ ตัวอย่างเช่น ถ้าหากจำเป็นที่ต้องปิด process นั้นก็ต้องรู้ process ID (PID) ของตัวนั้นที่แน่ชัดก่อน
-     
-คำสั่ง`kill`ใช้เพื่อทำลาย processes ด้วย process ID (PID)
+# คำสั่ง`ps`
+เป็นคำสั่งที่แสดงข้อมูลเกี่ยวกับ processes ที่กำลังทำงานอยู่ในระบบ
+|อาร์กิวเมนต์|คำอธิบาย|ตัวอย่าง|
+|---|-----------|-----|
+|`-A` หรือ `-e`|แสดงข้อมูลเกี่ยวกับ processes ทั้งหมด|`ps -A` หรือ `ps -e`|
+|`-f`|แสดงข้อมูลแบบ full-format|`ps -f`|
+|`-l`|แสดงข้อมูลแบบ long format|`ps -l`|
+|`-j`|แสดงข้อมูลแบบ jobs format.|`ps -j`|
+|`-o`|แสดงข้อมูลแบบ User-defined format|`ps -o pid,comm`|
+|`-p`|แสดงข้อมูลที่เลือกโดย PID|`ps -p 1234`|
+|`-t`|แสดงข้อมูลที่เลือกโดย TTY|`ps -t pts/1`|
+|`-u`|แสดงข้อมูลที่เลือกโดย effective user ID (EUID).|`ps -u root`|
+|`-x`|แสดงข้อมูลโดยไม่ต้องควบคุม terminal (เหมือน daemons)|`ps -x`|
+|`-C`|แสดงข้อมูลที่เลือกโดย command name|`ps -C bash`|
+|`-L`|แสดงข้อมูล threads โดยอาจมีคอลัมท์ LWP and NLWP|`ps -L`|
+## ตัวอย่างการนำไปใช้
+- แสดง process ที่ทำงานอยู่ในปัจจุบัน
+> ps
 
-คำสั่ง`killall`ใน Linux ใช้เพื่อทำลาย processes ด้วยชื่อ เป็นการทำลาย process วิธีที่มีประสิทธิภาพโดยมันจะทำการส่งสัญญาณไปยัง processes ตามชื่อที่ได้มีการระบุไว้
+- แสดงทุก process ที่ทำงานอยู่ในระบบ
+> ps -A หรือ ps -e
 
-## การจัดลำดับความสำคัญของ Processes ใน Linux
-การจัดลำดับความสำคัญของ process ที่กำลังทำงานอยู่สามารถทำได้โดยใช้คำสั่ง `nice` `renice` ใน Linux
+- แสดงทุก process ที่ทำงานอยู่ในระบบและแสดงแบบ full-format
+> ps -ef หรือ ps -eF
 
-คำสั่ง`nice`ใน Linux ใช้เพื่อปรับลำดับความสำคัญของ process โดยจะกำหนดลำคัญความสำคัญที่ต่ำกว่าให้กับ process เพื่อลดการใช้ทรัพยากร
+- แสดงข้อมูลแบบที่ผู้ใช้เป็นคนกำหนด output format เอง เช่นอยากเห็น PID, user, และคำสั่งในแต่ละ process
+> ps -e -o pid,user,comm
 
-คำสั่ง`renice`ใน Linux ใช้เพื่อปรับลำดับความสำคัญของ process ที่เริ่มการทำงานไปแล้ว โดยสามารรถปรับเพ่ิ่มหรือลดลำดับความสำคัญของ process ได้ขึ้นอยู่กับค่าที่ระบุ
-## การวิเคราะห์ทรัพยากรที่ใช้ใน Linux
-คำสั่ง`top`ใน Linux ใช้เพื่อการแสดงข้อมูลเกี่ยวกับ process แบบ real-time ที่ทำงานอยู่บนระบบรวมไปถึงการใช้ CPU และ memory โดยจะมี interface ที่ช่วยให้ผู้ใช้ตรวจสอบและจัดการ processes ได้
+- แสดงข้อมูลที่เลือก processes จาก PID เช่นอยากเห็นรายละเอียดของ process ที่มี PID 410 หรือแสดงแบบหลายๆ PID ได้
+> ps -fp 410
+
+> ps -fp 369,577,616 
+
+- แสดง process แบบ tree จะเห็นการเชื่อมโยงของ process ที่ทำงานร่วมกัน
+> ps -e --forest
+
 ***
 # แหล่งอ้างอิง
-https://www.scaler.com/topics/process-management-in-linux/
+- https://ioflood.com/blog/ps-linux-command/
+- https://www.hostpacific.com/ps-command-for-linux-process-monitoring-1/
