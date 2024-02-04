@@ -4,7 +4,18 @@ Computer Organization and Operating System Assignment (Chapter : Process, Sec : 
 # บทคัดย่อ
 # Boot Process
 # Process Management
-## Process Manaagement คืออะไร
+### ประเภทของ Processes
+#### Foreground processes หรือ interactive processes
+processes เหล่านี้จะไม่ได้ intitialize จากระบบต้องถูกดำเนินการโดยผู้ใช้หรือโปรแกรมเมอร์ processes เหล่านี้จะรับ input และส่ง output คืนกลับไป ในขณะที่ processes เหล่านี้กำลังทำงานอยู่เราจะไม่สามารถเริ่ม process ใหม่ได้ใน terminal เดียวกัน
+#### Background processes หรือ non interactive processes
+processes เหล่านี้จะถูกดำเนินการโดยจากระบบหรือผู้ใช้ก็ได้ processes เหล่านี้มี PID หรือ process เฉพาะและสามารถเริ่ม processes ใน terminal เดียวกันได้
+#### สถานะของ process ใน Linux
+- **Running :** process ที่กำลังดำเนินการอยู่ใน CPU
+- **Sleeping :** process ที่กำลังรอให้ทรัพยากรที่จะใช้นั้นว่าง
+- **Stopped :** process ที่ถูกทำลายโดยผู้ใช้
+- **Zombie :** process ที่ดำเนินการเสร้๗เรียบร้อยแล้วแต่ยังไม่ได้ถูกล้างโดยระบบ
+- **Orphan :** process ปัจจุบันที่ parent process ถูกทำลายไปแล้ว
+### Process Manaagement คืออะไร
 Process Management คือ งานในการควบคุมและติดตาม processesที่ทำงานอยู่บนระบบ Linux โดยรวมไปถึงกระบวนการจัดการทรัพยากร, การจัดลำดับการทำงานบน CPU, และการยกเลิกกระบวนการเมื่อจำเป็น
 ### คำสั่งของ Process Management ใน Linux
 |คำสั่ง|คำอธิบาย|
@@ -21,6 +32,7 @@ Process Management คือ งานในการควบคุมและ
 |bg|สำหรับการส่ง process ที่กำลังทำงานไป background|
 |fg|สำหรับการส่ง process ที่กำลังทำงานไป foreground|
 
+
 # Service Management
 # Task Scheduler
 
@@ -36,6 +48,6 @@ Process Management คือ งานในการควบคุมและ
 |65070231  |นาย สรพณ  เนตรนันต์|       |
 
 # แหล่งอ้างอิง
-## Process Management
+### Process Management
 - https://www.scaler.com/topics/process-management-in-linux/
-- https://www.geeksforgeeks.org/introduction-of-process-management/
+- https://www.geeksforgeeks.org/process-management-in-linux/
