@@ -17,30 +17,30 @@
 - แสดง process ที่ทำงานอยู่ในปัจจุบัน
 > ps
 
-![ps.png](../../Assets/ps.png)
+![ps.png](../../Assets/ps/ps.png)
 - แสดงทุก process ที่ทำงานอยู่ในระบบ
 > ps -A หรือ ps -e
 
-![ps-A.png](../../Assets/ps-A.png)
+![ps-A.png](../../Assets/ps/ps-A.png)
 - แสดงทุก process ที่ทำงานอยู่ในระบบและแสดงแบบ full-format
 > ps -ef หรือ ps -eF
 
-![ps-ef.png](../../Assets/ps-ef.png)
+![ps-ef.png](../../Assets/ps/ps-ef.png)
 - แสดงข้อมูลแบบที่ผู้ใช้เป็นคนกำหนด output format เอง เช่นอยากเห็น PID, user, และคำสั่งในแต่ละ process
 > ps -e -o pid,user,comm
 
-![ps-e-o.png](../../Assets/ps-e-o.png)
+![ps-e-o.png](../../Assets/ps/ps-e-o.png)
 - แสดงข้อมูลที่เลือก processes จาก PID เช่นอยากเห็นรายละเอียดของ process ที่มี PID 410 หรือแสดงแบบหลายๆ PID ได้
 > ps -fp 410
 
-![ps-fp410.png](../../Assets/ps-fp410.png)
+![ps-fp410.png](../../Assets/ps/ps-fp410.png)
 > ps -fp 369,577,616
 
-![ps-fp369.png](../../Assets/ps-fp369.png)
+![ps-fp369.png](../../Assets/ps/ps-fp369.png)
 - แสดง process แบบ tree จะเห็นการเชื่อมโยงของ process ที่ทำงานร่วมกัน
 > ps -e --forest
 
-![ps-e--forest.png](../../Assets/ps-e--forest.png)
+![ps-e--forest.png](../../Assets/ps/ps-e--forest.png)
 ***
 # แหล่งอ้างอิง
 - https://ioflood.com/blog/ps-linux-command/
