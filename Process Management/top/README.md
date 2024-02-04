@@ -22,27 +22,34 @@
 - แสดง process ที่ทำงานอยู่แบบ real-time
 > top
 
-![ps.png](../../Assets/ps.png)
+![top.png](../../Assets/top/top.png)
 - แสดง process ที่ทำงานอยู่แบบ real-time ของผู้ใช้ที่ระบุ
 > top -u woraphon
 
-![ps.png](../../Assets/ps.png)
+![top-u.png](../../Assets/top/top-u.png)
 - เมื่อเข้าสู่ top แล้วสามารถ E เพื่อเปลี่ยนการแสดงหน่วยของ memory ได้หรือกด e เพื่อเปลี่ยนการแสเงหน่วยของ memory ในรายการ process
 > กด E
 
-![ps.png](../../Assets/ps.png)
+![topE1.png](../../Assets/top/topE1.png)
+![topE2.png](../../Assets/top/topE2.png)
 > กด e
 
-![ps.png](../../Assets/ps.png)
+![top-e1.png](../../Assets/top/top-e1.png)
+![top-e2.png](../../Assets/top/top-e2.png)
 - เมื่อเข้าสู่ top แล้วสามารถกด t เพื่อสลับการดูกราฟการใช้งานของ CPU core ได้
 > กด t
 
-![ps.png](../../Assets/ps.png)
+![topt1.png](../../Assets/top/topt1.png)
+![topt2.png](../../Assets/top/topt2.png)
 - เมื่อเข้าสู่ top แล้วสามารถกด m เพื่อสลับการดูกราฟการใช้งาน memory ได้
 > กด m
 
-![ps.png](../../Assets/ps.png)
+![topm1.png](../../Assets/top/topm1.png)
+![topm2.png](../../Assets/top/topm2.png)
 - เมื่อเข้าสู่ top แล้วสามารถกด z เพื่อเปลี่ยนสีการแสดงผลของ top ได้
 > กด z
 
-![ps.png](../../Assets/ps.png)
+![topz.png](../../Assets/top/topz.png)
+***
+# แหล่งอ้างอิง
+- https://phoenixnap.com/kb/top-command-in-linux
