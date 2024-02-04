@@ -1,13 +1,13 @@
 # Process-1
 Computer Organization and Operating System Assignment (Chapter : Process, Sec : 1)
 
-#บทคัดย่อ
-#Boot Process
-#Process Management
-#Service Management
-#Task Scheduler
+# บทคัดย่อ
+# Boot Process
+# Process Management
+# Service Management
+# Task Scheduler
 
-#สมาชิก
+# สมาชิก
 |รหัสนักศึกษา|ชื่อขนามสกุล|ส่วนที่รับผิดชอบ|
 |----------|---------------|-----------|
 |65070110  |นาย นครินทร์  ทิพย์รัตน์|       |
@@ -18,4 +18,4 @@ Computer Organization and Operating System Assignment (Chapter : Process, Sec : 
 |65070230  |นาย สมิทธิพงศ์  จูปรางค์|       |
 |65070231  |นาย สรพณ  เนตรนันต์|       |
 
-#แหล่งอ้างอิง
+# แหล่งอ้างอิง
