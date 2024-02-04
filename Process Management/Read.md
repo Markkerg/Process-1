@@ -16,7 +16,7 @@
 ## ตัวอย่างการนำไปใช้
 - แสดง process ที่ทำงานอยู่ในปัจจุบัน
 > ps
-<img src="Assets/ps.png" width="150" height="auto">
+<img src="../../Assets/ps.png" width="150" height="auto">
 - แสดงทุก process ที่ทำงานอยู่ในระบบ
 > ps -A หรือ ps -e
 <img src="Assets/ps-A.png" width="150" height="auto">
