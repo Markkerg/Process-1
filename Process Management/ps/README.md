@@ -19,8 +19,10 @@
 |`ps PID`|แสดงข้อมูลเกี่ยวกับ process แบบเฉพาะ|เมื่อต้องการรู้ PID ของ process แบบเฉพาะเจาะจง|
 
 ก็จะแสดงข้อมูลออกมาแบบนี้  
+
 ![pspid674.png](../../Assets/ps/pspid674.png)  
-โดย 
+
+โดย  
 - **PID** คือ ID ของ process
 - **TTY** คือ ชื่อที่ใช้ในการควบคุม terminal ของ process
 - **TIME** คือ เวลาที่ process ใช้เวลาทำงานทั้งหมด
@@ -64,3 +66,4 @@
 # แหล่งอ้างอิง
 - https://ioflood.com/blog/ps-linux-command/
 - https://www.hostpacific.com/ps-command-for-linux-process-monitoring-1/
+- https://linuxize.com/post/ps-command-in-linux/
