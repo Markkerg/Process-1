@@ -10,14 +10,14 @@
 - แสดง process ที่ทำงานอยู่ในปัจจุบัน โดยมี format การแสดงคือ pid,ppid,nice value,comm
 > ps -eo pid,ppid,ni,comm
 
-![niceps.png](../../Assets/nice/niceps.png)
+![reniceps.png](../../Assets/renice/reniceps.png)
 > การเปลี่ยนค่า nice ของ process ที่มี PID คือ 671 โดยใช้คำสั่ง `sudo renice -n 5 -p 671`
 
-![nicepositive.png](../../Assets/nice/nicepositive.png)
+![renice-p.png](../../Assets/renice/renice-p.png)
 - การเปลี่ยนค่า nice ของ user ในตัวอย่างนี้ชื่อ user คือ woraphon
 > sudo renice -n -3 -u woraphon
 
-![nicenegative.png](../../Assets/nice/nicenegative.png)
+![renice-u.png](../../Assets/renice/renice-u.png)
 ***
 # แหล่งอ้างอิง
 - https://www.scaler.com/topics/linux-nice/
