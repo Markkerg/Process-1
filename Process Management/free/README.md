@@ -1,69 +1,34 @@
 # คำสั่ง`free`
-เป็นคำสั่งที่แสดงข้อมูลเกี่ยวกับ processes ที่กำลังทำงานอยู่ในระบบ
+เป็นคำสั่งที่แสดงข้อมูลเกี่ยวกับการใช้งานหน่วยความจำในระบบ
 |อาร์กิวเมนต์|คำอธิบาย|ตัวอย่าง|
 |---|-----------|-----|
-|`-A` หรือ `-e`|แสดงข้อมูลเกี่ยวกับ processes ทั้งหมด|`ps -A` หรือ `ps -e`|
-|`-f`|แสดงข้อมูลแบบ full-format|`ps -f`|
-|`-l`|แสดงข้อมูลแบบ long format|`ps -l`|
-|`-j`|แสดงข้อมูลแบบ jobs format.|`ps -j`|
-|`-o`|แสดงข้อมูลแบบ User-defined format|`ps -o pid,comm`|
-|`-p`|แสดงข้อมูลที่เลือกโดย PID|`ps -p 1234`|
-|`-t`|แสดงข้อมูลที่เลือกโดย TTY|`ps -t pts/1`|
-|`-u`|แสดงข้อมูลที่เลือกโดย effective user ID (EUID).|`ps -u root`|
-|`-x`|แสดงข้อมูลโดยไม่ต้องควบคุม terminal (เหมือน daemons)|`ps -x`|
-|`-C`|แสดงข้อมูลที่เลือกโดย command name|`ps -C bash`|
-|`-L`|แสดงข้อมูล threads โดยอาจมีคอลัมท์ LWP and NLWP|`ps -L`|
-## คำสั่ง`ps`ในรูปแบบอื่นๆ
-|วิธีการ|คำอธิบาย|ใช้ในกรณี|
-|---|-----------|-----|
-|`ps PID`|แสดงข้อมูลเกี่ยวกับ process แบบเฉพาะ|เมื่อต้องการรู้ PID ของ process แบบเฉพาะเจาะจง|
-
-ก็จะแสดงข้อมูลออกมาแบบนี้  
-
-![pspid674.png](../../Assets/ps/pspid674.png)  
-
-โดย  
-- **PID** คือ ID ของ process
-- **TTY** คือ ชื่อที่ใช้ในการควบคุม terminal ของ process
-- **TIME** คือ เวลาที่ process ใช้เวลาทำงานทั้งหมด
-- **CMD** คือ ชื่อของคำสั่งที่ใช้ในการเริ่มทำ process
+|`-b` หรือ `--bytes`|แสดงข้อมูลหน่วยความจำในหน่วย btytes|`free -b`|
+|`-k` หรือ `--kilo`|แสดงข้อมูลหน่วยความจำในหน่วย kilobytes|`free -k`|
+|`-m` หรือ `--mega`|แสดงข้อมูลหน่วยความจำในหน่วย megabytes|`free -m`|
+|`-g` หรือ `--giga`|แสดงข้อมูลหน่วยความจำในหน่วย gigabytes|`free -g`|
+|`--tera`|แสดงข้อมูลหน่วยความจำในหน่วย terabtytes|`free --tera`|
+|`-h` หรือ `--human`|แสดงข้อมูลหน่วยความจำในรูปแบบที่อ่านง่าย|`free -h`|
+|`-c` หรือ `--count`|จะแสดงข้อมูลหน่วยความจำเป็นจำนวนครั้ง|`free -c 3`|
+|`-l` หรือ `--lohi`|แสดงข้อมูลหน่วยความจำทางสถิติต่ำและสูง|`free -l`|
+|`-s` หรือ `--seconds`|แสดงข้อมูลหน่วยความจำแบบหน่วงเวลา|`free -s 5`|
+|`-t` หรือ `--total`|แสดงข้อมูลหน่วยความจำโดยเพิ่ม total ไปในบรรทัดสุดท้าย|`free -t`|
 ## ตัวอย่างการนำไปใช้
-- แสดง process ที่ทำงานอยู่ในปัจจุบัน
-> ps
+- แสดงข้อมูลหน่วยความจำในหน่วย megabytes
+> free -b
 
-![ps.png](../../Assets/ps/ps.png)
-- แสดงทุก process ที่ทำงานอยู่ในระบบ
-> ps -A หรือ ps -e
+![free-b.png](../../Assets/free/free-b.png)
+- แสดงข้อมูลหน่วยความจำในหน่วย megabytes
+> free -m
 
-![ps-A.png](../../Assets/ps/ps-A.png)
-- แสดงทุก process ที่ทำงานอยู่ในระบบและแสดงแบบ full-format
-> ps -ef หรือ ps -eF
+![free-m.png](../../Assets/free/free-m.png)
+- แสดงข้อมูลหน่วยความจำเป็นจำนวนครั้ง
+> free -c 5 
 
-![ps-ef.png](../../Assets/ps/ps-ef.png)
-- แสดงข้อมูลแบบที่ผู้ใช้เป็นคนกำหนด output format เอง เช่นอยากเห็น PID, user, และคำสั่งในแต่ละ process
-> ps -e -o pid,user,comm
+![free-c5.png](../../Assets/free/free-c5.png)
+- แสดงข้อมูลหน่วยความจำโดยมีสรุป total ไปในบรรทัดสุดท้าย
+> free -t
 
-![ps-e-o.png](../../Assets/ps/ps-e-o.png)
-- แสดงข้อมูลที่เลือก processes จาก PID เช่นอยากเห็นรายละเอียดของ process ที่มี PID 410 หรือแสดงแบบหลายๆ PID ได้
-> ps -fp 410
-
-![ps-fp410.png](../../Assets/ps/ps-fp410.png)
-> ps -fp 369,577,616
-
-![ps-fp369.png](../../Assets/ps/ps-fp369.png)
-- แสดง process แบบ tree จะเห็นการเชื่อมโยงของ process ที่ทำงานร่วมกัน
-> ps -e --forest
-
-![ps-e--forest.png](../../Assets/ps/ps-e--forest.png)
-- ถ้าหากเราอยากรู้ข้อมูลของ process แบบเฉพาะเจาะจง สามารถใช้คำสั่ง`ps PID`ได้เช่น
-> อยากรู้ข้อมูลของ process ที่มี PID 674 ก็ใช้คำสั่ง`ps 674`
-
-![pspid674.png](../../Assets/ps/pspid674.png)
-> หรือถ้าหากอยากรู้แบบเฉพาะหลายๆตัวก็ทำได้เช่นกัน เช่น`ps 674 699`
-
-![pspid674699.png](../../Assets/ps/pspid674699.png)
+![free-t.png](../../Assets/free/free-t.png)
 ***
 # แหล่งอ้างอิง
-- https://ioflood.com/blog/ps-linux-command/
-- https://www.hostpacific.com/ps-command-for-linux-process-monitoring-1/
-- https://linuxize.com/post/ps-command-in-linux/
+- https://www.geeksforgeeks.org/free-command-linux-examples/
