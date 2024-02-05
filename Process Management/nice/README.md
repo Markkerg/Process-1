@@ -7,13 +7,13 @@
 - แสดง process ที่ทำงานอยู่ในปัจจุบันและเอาเฉพาะบรรทัดที่มีคำว่า terminal
 > ps -el | grep terminal
 
-![ps.png](../../Assets/ps/ps.png)
+![niceps.png](../../Assets/nice/niceps.png)
 > การตั้งค่า nice ให้เป็นค่าบวก
 
-![ps-A.png](../../Assets/ps/ps-A.png)
+![nicepositive.png](../../Assets/nice/nicepositive.png)
 > การตั้งค่า nice ให้เป็นค่าลบ
 
-![ps-A.png](../../Assets/ps/ps-A.png)
+![nicenegative.png](../../Assets/nice/nicenegative.png)
 ***
 # แหล่งอ้างอิง
 - https://www.geeksforgeeks.org/nice-and-renice-command-in-linux-with-examples/
