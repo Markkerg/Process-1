@@ -60,7 +60,6 @@ Process Management คือ งานในการควบคุมและ
 |kill|ทำลาย process นั้นโดยการส่งสัญญาณไปยัง process นั้น|
 |nice|ปรับลำดับความสำคัญของ process|
 |renice|เปลี่ยนลำดับความสำคัญของ process ที่กำลังทำงานอยู่|
-|ps PID|แสดงสถานะของ process ที่มีความแน่ชัด|
 |pidof|แสดงหมายเลข ID ของ process|
 |df|แสดง Disk Management ในระบบ|
 |free|แสดงสถานะของ RAM|
@@ -111,7 +110,6 @@ Process Management คือ งานในการควบคุมและ
 - https://www.baeldung.com/linux/boot-process
 - https://en.wikipedia.org/wiki/Booting_process_of_Linux
 ### Process Management
-
 - https://www.scaler.com/topics/process-management-in-linux/
-
 - https://www.geeksforgeeks.org/process-management-in-linux/
+- https://unstop.com/blog/process-management-in-linux
