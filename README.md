@@ -62,7 +62,7 @@ Process Management คือ งานในการควบคุมและ
 |renice|เปลี่ยนลำดับความสำคัญของ process ที่กำลังทำงานอยู่|
 |pidof|แสดงหมายเลข ID ของ process|
 |df|แสดง Disk Management ในระบบ|
-|free|แสดงสถานะของ RAM|
+|jobs|แสดงรายการงานทั้งที่กำลังทำงานหรือหยุดทำงานไปแล้ว|
 |bg|สำหรับการส่ง process ที่กำลังทำงานไป background|
 |fg|สำหรับการส่ง process ที่กำลังทำงานไป foreground|
 
