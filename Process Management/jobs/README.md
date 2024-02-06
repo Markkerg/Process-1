@@ -1,34 +1,26 @@
-# คำสั่ง`fre`
-เป็นคำสั่งที่แสดงข้อมูลเกี่ยวกับการใช้งานหน่วยความจำในระบบ
+# คำสั่ง`jobs`
+เป็นคำสั่งที่แสดงรายการของงานที่กำลังอยู่ทั้ง background และ foreground
 |อาร์กิวเมนต์|คำอธิบาย|ตัวอย่าง|
 |---|-----------|-----|
-|`-b` หรือ `--bytes`|แสดงข้อมูลหน่วยความจำในหน่วย btytes|`free -b`|
-|`-k` หรือ `--kilo`|แสดงข้อมูลหน่วยความจำในหน่วย kilobytes|`free -k`|
-|`-m` หรือ `--mega`|แสดงข้อมูลหน่วยความจำในหน่วย megabytes|`free -m`|
-|`-g` หรือ `--giga`|แสดงข้อมูลหน่วยความจำในหน่วย gigabytes|`free -g`|
-|`--tera`|แสดงข้อมูลหน่วยความจำในหน่วย terabtytes|`free --tera`|
-|`-h` หรือ `--human`|แสดงข้อมูลหน่วยความจำในรูปแบบที่อ่านง่าย|`free -h`|
-|`-c` หรือ `--count`|จะแสดงข้อมูลหน่วยความจำเป็นจำนวนครั้ง|`free -c 3`|
-|`-l` หรือ `--lohi`|แสดงข้อมูลหน่วยความจำทางสถิติต่ำและสูง|`free -l`|
-|`-s` หรือ `--seconds`|แสดงข้อมูลหน่วยความจำแบบหน่วงเวลา|`free -s 5`|
-|`-t` หรือ `--total`|แสดงข้อมูลหน่วยความจำโดยเพิ่ม total ไปในบรรทัดสุดท้าย|`free -t`|
+|`-l`|แสดงรายการงานและ PID|`jobs -l`|
+|`-p`|แสดงเฉพาะ PID ของงาน|`jobs -p`|
+|`-n`|แสดงรายการเฉพาะ processes ที่มีการเปลี่ยนสถานะจากครั้งที่แล้ว|`jobs -n`|
+|`-r`|แสดงรายการงานเฉพาะงานที่กำลังทำงานอยู่|`jobs -r`|
+|`-s`|แสดงรายการงานเฉพาะงานที่หยุดทำงานอยู่|`jobs -s`|
 ## ตัวอย่างการนำไปใช้
-- แสดงข้อมูลหน่วยความจำในหน่วย megabytes
-> free -b
+- แสดงรายการงานที่ทำงานอยู่ background
+> jobs
 
-![free-b.png](../../Assets/free/free-b.png)
-- แสดงข้อมูลหน่วยความจำในหน่วย megabytes
-> free -m
+![jobs.png](../../Assets/jobs/jobs.png)
+- แสดงรายการงานที่ทำงานอยู่ background และแสดง PID
+> jobs -l
 
-![free-m.png](../../Assets/free/free-m.png)
-- แสดงข้อมูลหน่วยความจำเป็นจำนวนครั้ง
-> free -c 5 
+![jobs-l.png](../../Assets/jobs/jobs-l.png)
+- แสดงเฉพาะ PID ของงาน
+> jobs -p
 
-![free-c5.png](../../Assets/free/free-c5.png)
-- แสดงข้อมูลหน่วยความจำโดยมีสรุป total ไปในบรรทัดสุดท้าย
-> free -t
-
-![free-t.png](../../Assets/free/free-t.png)
+![jobs-p.png](../../Assets/jobs/jobs-p.png)
 ***
 # แหล่งอ้างอิง
-- https://www.geeksforgeeks.org/free-command-linux-examples/
+- https://hopeness.medium.com/master-the-linux-jobs-command-a-comprehensive-guide-ce2b791312fa
+- https://www.geeksforgeeks.org/process-control-commands-unixlinux/
