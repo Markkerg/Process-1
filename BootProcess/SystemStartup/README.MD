@@ -16,7 +16,6 @@ BIOS นั้นจะถูกติดตั้งมาพร้อมกั
 | *หน้าต่างการตั้งค่าของ BIOS* |
 
 ## 2. UEFI (Unified Extensible Firmware Interface)
-```
 
 
 
