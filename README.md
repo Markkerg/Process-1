@@ -153,6 +153,7 @@ Systemd เป็นระบบ init และผู้จัดการระ
 - https://www.scaler.com/topics/process-management-in-linux/
 - https://wwwgeeksforgeeksorg/process-management-in-linux/
 - https://unstopcom/blog/process-management-in-linux
+- https://www.digitalocean.com/community/tutorials/process-management-in-linux
 ### Service Management
 - https://schh.medium.com/linux-services-with-systemd-d0252a27ebce
 - https://www.digitalocean.com/community/tutorials/how-to-use-systemctl-to-manage-systemd-services-and-units
