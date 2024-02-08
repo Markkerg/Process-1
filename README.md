@@ -137,6 +137,11 @@ Systemd เป็นระบบ init และผู้จัดการระ
 
 # Task Scheduler
 
+### Task Scheduler คืออะไร ?
+
+Task Scheduler คือ ตัวตั่งเวลาเพื่อให้เริ่มการทำงานต่างๆ ช่วยในการจัดการกับงานที่ต้องการให้ระบบทำงานตามเวลาที่กำหนดหรือเหตุการณ์ที่เกิดขึ้น เราสามารถใช้เครื่องมือต่างๆ ที่มีอยู่ในระบบ Linux เพื่อทำหน้าที่เหล่านี้ได้ เช่น cron, systemd timer
+แต่โดยทั่วไปแล้ว cron มักถูกใช้มากที่สุดในการจัดการ Task Scheduler ในระบบ Linux เนื่องจากมีความยืดหยุ่นและสามารถใช้งานได้ง่าย
+
   
 
 # สมาชิก
@@ -169,3 +174,5 @@ Systemd เป็นระบบ init และผู้จัดการระ
 - https://docs.openeuler.org/en/docs/22.03_LTS_SP1/docs/Administration/service-management.html#systemctl-command
 - https://www.geeksforgeeks.org/init-command-in-linux-with-examples/
 - https://rimuhosting.com/knowledgebase/linux/managing-services
+### Task Scheduler
+- https://www.freecodecamp.org/news/cron-jobs-in-linux/
