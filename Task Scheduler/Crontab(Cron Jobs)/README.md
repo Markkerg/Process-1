@@ -28,7 +28,11 @@
 |`5 4 * * 6 /path/to/script`|เริ่มทำงานเวลา 04:05 ในวันที่ 6 ของอาทิตย์(วันสาร์)|
 |`0 22 * * 1-5 /path/to/script`|เริ่มทำงานเวลา 22:00 ในทุกๆที่ 1-5 (วันจันทร์-วันศุกร์)|
 
-### แหล่งอ้างอิง
+# How to set up a cron job
+### 1. 
+สร้าง
+
+# แหล่งอ้างอิง
 - https://www.freecodecamp.org/news/cron-jobs-in-linux/
 - https://phoenixnap.com/kb/set-up-cron-job-linux#basic-crontab-syntax
 - https://vk9-sec.com/exploiting-the-cron-jobs-misconfigurations-privilege-escalation/
