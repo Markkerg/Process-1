@@ -188,7 +188,7 @@ Task Scheduler คือ ตัวตั้งเวลาเพื่อให�
 
 ## cron job syntax
 
-![alt text]([https://vk9-sec.com/wp-content/uploads/2022/04/how-to-set-up-a-cron-job-in-linux-nil-tutorials.jpeg])
+![My Remote Image](https://vk9-sec.com/wp-content/uploads/2022/04/how-to-set-up-a-cron-job-in-linux-nil-tutorials.jpeg)
 
 ### ตัวอย่างเช่น
 
