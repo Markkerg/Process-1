@@ -3,7 +3,8 @@ Bootloader เป็นโปรแกรมขนาดเล็กสำหร
 1. **first stage bootloader (stage 1)** ถูกโหลดมาจาก Firmware stage โดย bootloader stage 1 จะเก็บ program code และ ตารางพาร์ติชัน ทำหน้าที่ในการค้นหาและโหลด bootloader stage 2 โดยการค้นหาจะใช้ตารางพาร์ติชันในการค้นหา
 2. **second stage bootloader (stage 2)** หน้าที่ของ bootloader stage 2 คือการโหลดอิมเมจเคอร์เนลลินุกซ์ลงในหน่วยความจำ
 - ระบบ Linux นั้นมี bootloader หลายประเภท ซึ่งจะยกมา 3 ตัว คือ
-## 1. LILO <a name = "LILO"></a>  (Linux Loader)
+<a name = "LILO"></a>
+## 1. LILO (Linux Loader)
 ### LILO คืออะไร? 
 LILO ใช้ในการโหลด Linux ลงในหน่วยความจำ และบูตระบบปฏิบัติการจาก ฮาร์ดดิสก์ และไม่ขึ้นอยู่กับระบบไฟล์
 LILO จัดการงานบางอย่าง เช่น ค้นหาเคอร์เนล ระบุโปรแกรมที่รองรับอื่นๆ โหลดหน่วยความจำ และสตาร์ทเคอร์เนล 
