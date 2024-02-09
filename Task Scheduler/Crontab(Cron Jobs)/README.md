@@ -29,8 +29,29 @@
 |`0 22 * * 1-5 /path/to/script`|เริ่มทำงานเวลา 22:00 ในทุกๆที่ 1-5 (วันจันทร์-วันศุกร์)|
 
 # How to set up a cron job
-### 1. 
-สร้าง
+
+### Step 1
+
+สร้าง script `script.sh`
+
+![My Remote Image](https://www.freecodecamp.org/news/content/images/2021/11/image-67.png)
+
+### Step 2
+
+ทำให้ script สามารถเรียกใช้งานได้โดยให้สิทธิ์ในการเรียกใช้งาน `chmod 775 script.sh`
+
+### Step 3
+
+ใช้ `contrab -e` เพื่อให้ script เข้าไปอยู่ใน crontab
+
+### Step 4
+
+สร้าง cron job โดยใช้ cron job syntax ในหน้าต่าง cron
+
+### Step 5
+
+เมื่อเพิ่มคำสั่งเข้าไปในไฟล์ Cron ให้บันทึกและปิดโปรแกรมที่ใช้ในการแก้ไข เช่นถ้าใช้ nano กด Ctrl+X
+
 
 # แหล่งอ้างอิง
 - https://www.freecodecamp.org/news/cron-jobs-in-linux/
