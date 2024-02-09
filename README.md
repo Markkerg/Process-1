@@ -20,8 +20,7 @@ Boot process ของ Linux ประกอบด้วยหลายขั้
  storage ต่างๆ เพื่อหา bootloader ซึ่งจะทำหน้าที่เลือกและโหลดระบบปฏิบัติการที่จะเริ่มต้น เมื่อผู้ใช้เลือกระบบปฏิบัติการที่ต้องการเริ่มต้น โปรแกรมบูตโลดเดอร์จะโหลด kernel และ initramfs(ถ้ามี)
 ใน linux ก็จะมี bootloader หลักๆคือ 
 > - [LILO  (LInux LOader)](/BootProcess/BootloaderStage/README.md#LILO)
-> -   GRUB (GRand Unified Bootloader)
-> -   GRUB2 (GRand Unified Bootloader)
+> -   GRUB/GRUB2 (GRand Unified Bootloader)
 3. **Kernel:** โปรแกรมบูตโลดเดอร์จะโหลด kernel ของระบบปฏิบัติการ Linux ลงในหน่วยความจำ (RAM) และเริ่มต้นการทำงานของ kernel ซึ่งรวมถึงการเข้าถึงทรัพยากรของเครื่องคอมพิวเตอร์ที่จำเป็นสำหรับการทำงาน
 4. **Init process:** Kernel จะเริ่มต้นกระบวนการ init ซึ่งเป็นโปรแกรมแรกที่เริ่มต้นในระบบของ Linux ในที่นี้ parent ของกระบวนการ Linux ทั้งหมดคือ Systemd ตามขั้นตอนการบูต Systemd จะดำเนินการต่างๆ
 โปรแกรม init จะมี PID (Process ID) เป็น 1 และมีหน้าที่เป็นตัวควบคุมการทำงานของกระบวนการอื่นๆ ในระบบ เช่น การสร้างกระบวนการ(process) อื่นๆ และการจัดการกับบริการ(service) ต่างๆ
