@@ -1,4 +1,22 @@
+# Cron
+
+Cron ใน Linux เป็นเครื่องมือที่ใช้ในการจัดการงานที่ต้องการให้ทำงานอัตโนมัติตามตารางเวลาที่กำหนดไว้ ด้วยการใช้ cron ผู้ใช้สามารถกำหนดงานให้ทำงานเป็นระยะๆ ไม่ว่าจะเป็นการสำรองข้อมูล, การสร้างสำเนาของไฟล์, การทำความสะอาดระบบ, การอัปเดตซอฟต์แวร์, และงานอื่นๆ อีกมากมายตามที่ต้องการ
+
+Cron จึงประโยชน์มากในการ automate งานที่ต้องทำซ้ำ ๆ เป็นประจำ เช่น การส่ง notification แจ้งเตือนทุกเช้า, การลบข้อมูล log เก่าในทุก ๆ สิ้นเดือน, การ backup ข้อมูล, การทำ maintenance check
+
+Cron ประกอบไปด้วย 2องค์ประกอบ คือ
+
+### 1.Crontab
+
+เป็นคำสั่งที่ใช้ในการจัดการกับตารางเวลาของ cron jobs โดย crontab จะช่วยให้ผู้ใช้สามารถสร้าง, แก้ไข และลบ cron jobs ได้โดยใช้คำสั่งที่เกี่ยวข้อง
+
+### 2.Cron daemon
+
+ระบบ cron daemon ทำหน้าที่ตรวจสอบตารางเวลา crontab และเรียกใช้งานคำสั่งตามตารางที่กำหนด โดย cron daemon จะทำงานเป็นระยะๆ ตรวจสอบไฟล์ crontab ทุกๆ นาทีเพื่อดำเนินการตามตารางเวลาที่กำหนด
+
 # Crontab Commands
+
+คำสั่ง crontab ใช้ในการจัดการกับตารางเวลา (cron table) ในระบบปฏิทินเวลาของ Unix-like operating systems เช่น Linux หรือ macOS ซึ่งช่วยให้ผู้ใช้สามารถกำหนดงานที่ต้องการให้ทำงานตามเวลาที่กำหนดได้โดยอัตโนมัติ
 
 |Commands|Meaning|
 |------------------------|------------------------------------------------------------|
@@ -57,3 +75,4 @@
 - https://www.freecodecamp.org/news/cron-jobs-in-linux/
 - https://phoenixnap.com/kb/set-up-cron-job-linux#basic-crontab-syntax
 - https://vk9-sec.com/exploiting-the-cron-jobs-misconfigurations-privilege-escalation/
+- https://www.redwood.com/article/linux-job-scheduling/
