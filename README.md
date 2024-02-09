@@ -188,23 +188,9 @@ Task Scheduler คือ ตัวตั้งเวลาเพื่อให�
 
 ## cron job syntax
 
-*   *   *   *   *  sh /path/to/script/script.sh
-|   |   |   |   |              |
-|   |   |   |   |      Command or Script to Execute        
-|   |   |   |   |
-|   |   |   |   |
-|   |   |   |   |
-|   |   |   | Day of the Week(0-6)
-|   |   |   |
-|   |   | Month of the Year(1-12)
-|   |   |
-|   | Day of the Month(1-31)  
-|   |
-| Hour(0-23)  
-|
-Min(0-59)
+![alt text]([http://url/to/img.png](https://vk9-sec.com/wp-content/uploads/2022/04/how-to-set-up-a-cron-job-in-linux-nil-tutorials.jpeg))
 
-###ตัวอย่างเช่น
+### ตัวอย่างเช่น
 
 |ตั้งเวลา|ความหมาย|
 |----------------------------|---------------------------------------------|
