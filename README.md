@@ -248,3 +248,4 @@ Task Scheduler คือ ตัวตั้งเวลาเพื่อให�
 - https://www.freecodecamp.org/news/cron-jobs-in-linux/
 - https://phoenixnap.com/kb/set-up-cron-job-linux#basic-crontab-syntax
 - https://vk9-sec.com/exploiting-the-cron-jobs-misconfigurations-privilege-escalation/
+- https://www.redwood.com/article/linux-job-scheduling/
