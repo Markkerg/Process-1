@@ -75,7 +75,7 @@ Configuring file ของ LILO อยู่ที่ “/etc/lilo.conf”
 | **GRUB_DISTRIBUTOR="$(sed 's, release .*$,,g' /etc/system-release)"**| คีย์นี้กำหนด sed(stream editor) ที่ระบุถึงหมายเลขการจัดจำหน่ายออกจากไฟล์ /etc/system-release เพิ่อให้ทราบถึง โครงสร้างการจัดเก็บข้อมูลตามแต่ละหมายเลข|
 | **GRUB_DEFAULT=saved** | กำหนดว่าเคอร์เนลใดที่จะบู๊ตตามค่าเริ่มต้น "saved" หมายถึงเคอร์เนลล่าสุด |
 | **GRUB_DISABLE_SUBMENU=true**| สร้างโครงสร้างเมนูย่อยๆของเคอร์เนลสำหรับหน้า GRUB menu "false" จะทำให้สามารถใช้เมนูย่อยได้|
-| **GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"**| กำหนดพารามิเตอร์ ที่จะถูกนำไปต่อท้ายในบรรทัดสุดท้ายของ command-line เคอร์เนล "quiet splash" ทำให้เห็นเป็นจอสีจำที่แสดงเพียงแค่ตัวหนังสือ |
+| **GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"**| กำหนดพารามิเตอร์ ที่จะถูกนำไปต่อท้ายในบรรทัดสุดท้ายของ command-line เคอร์เนล "quiet splash" ทำให้เห็นเป็นจอสีดำที่แสดงเพียงแค่ตัวหนังสือ |
 | **GRUB_DISABLE_RECOVERY="true"** | กำหนดว่าให้สร้างรายการกู้คืนหรือไม่ "true" คือไม่ให้สร้าง|
 | **GRUB_DISABLE_OS_PROBER=true** |ปิดใช้งานการตรวจจับระบบปฏิบัติการแบบไดนามิก|
 ### คำสั่งใน GRUB CLI
