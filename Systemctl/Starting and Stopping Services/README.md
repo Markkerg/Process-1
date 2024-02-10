@@ -3,16 +3,16 @@
 ```
 systemctl start name.service
 ```
-> systemctl start apache2
+> systemctl start ssh
 
-![start](https://phoenixnap.com/kb/wp-content/uploads/2021/04/systemctl-start-service-1.png)
+![start](https://github.com/Markkerg/Process-1/blob/main/Assets/systemctl/start.png)
 
 ## หยุด Service
 ใช้คำสั่งต่อไปนี้
 ```
 systemctl stop name.service
 ```
-> systemctl stop apache2
+> systemctl stop ssh
 
-![start](https://phoenixnap.com/kb/wp-content/uploads/2021/04/systemctl-stop-service-1.png)
+![stop](https://github.com/Markkerg/Process-1/blob/main/Assets/systemctl/stop.png)
 
