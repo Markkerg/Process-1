@@ -5,7 +5,7 @@ systemctl status name.service
 ```
 > systemctl status ssh
 
-![status](https://www.tecmint.com/wp-content/uploads/2019/08/List-All-Services-Under-Systemd.png)
+![status](https://github.com/Markkerg/Process-1/blob/main/Assets/systemctl/status.png)
 
 ### ผลลัพธ์จากคำสั่ง Status
 
@@ -27,7 +27,7 @@ systemctl is-active name.service
 ```
 > systemctl is-active ssh
 
-![active](https://www.tecmint.com/wp-content/uploads/2019/08/List-All-Services-Under-Systemd.png)
+![active](https://github.com/Markkerg/Process-1/blob/main/Assets/systemctl/active.png)
 
 ### ผลลัพธ์จากคำสั่ง is-active
 
@@ -48,7 +48,7 @@ systemctl is-enabled name.service
 ```
 > systemctl is-enabled ssh
 
-![enabled](https://www.tecmint.com/wp-content/uploads/2019/08/List-All-Services-Under-Systemd.png)
+![enabled](https://github.com/Markkerg/Process-1/blob/main/Assets/systemctl/enable.png)
 
 ### ผลลัพธ์จากคำสั่ง is-enabled
 
