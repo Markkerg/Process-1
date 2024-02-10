@@ -213,7 +213,7 @@ Task Scheduler คือ ตัวตั้งเวลาเพื่อให�
 - https://en.wikipedia.org/wiki/Booting_process_of_Linux
 ### Process Management
 - https://www.scaler.com/topics/process-management-in-linux/
-- https://wwwgeeksforgeeksorg/process-management-in-linux/
+- https://www.geeksforgeeks.org/process-management-in-linux/
 - https://unstop.com/blog/process-management-in-linux
 - https://www.digitalocean.com/community/tutorials/process-management-in-linux
 ### Service Management
