@@ -222,7 +222,6 @@ Task Scheduler คือ ตัวตั้งเวลาเพื่อให�
 - https://docs.openeuler.org/en/docs/22.03_LTS_SP1/docs/Administration/service-management.html#systemctl-command
 - https://www.liquidweb.com/kb/what-is-systemctl-an-in-depth-overview/
 - https://linuxhint.com/list-service-systemd/
-- https://phoenixnap.com/kb/start-stop-restart-linux-services
 ### Task Scheduler
 - https://www.freecodecamp.org/news/cron-jobs-in-linux/
 - https://phoenixnap.com/kb/set-up-cron-job-linux#basic-crontab-syntax
