@@ -27,7 +27,7 @@ systemctl is-active name.service
 ```
 > systemctl is-active ssh
 
-![active](https://github.com/Markkerg/Process-1/blob/main/Assets/systemctl/active.png)
+![active](https://github.com/Markkerg/Process-1/blob/main/Assets/systemctl/is-active.png)
 
 ### ผลลัพธ์จากคำสั่ง is-active
 
@@ -48,7 +48,7 @@ systemctl is-enabled name.service
 ```
 > systemctl is-enabled ssh
 
-![enabled](https://github.com/Markkerg/Process-1/blob/main/Assets/systemctl/enable.png)
+![enabled](https://github.com/Markkerg/Process-1/blob/main/Assets/systemctl/is-enable.png)
 
 ### ผลลัพธ์จากคำสั่ง is-enabled
 
