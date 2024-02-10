@@ -5,7 +5,7 @@ systemctl enable name.service
 ```
 > systemctl enable ssh
 
-![enable](https://github.com/Markkerg/Process-1/blob/main/Assets/systemctl/enable.png)
+![enable](https://github.com/Markkerg/Process-1/blob/main/Assets/systemctl/enable.png?raw=true)
 
 ## ปิดใช้งาน Service
 เปิดใช้งานบริการ ป้องกันไม่ให้บริการเริ่มต้นโดยอัตโนมัติทุกครั้งที่ระบบเปิดใหม่
