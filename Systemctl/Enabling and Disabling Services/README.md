@@ -8,7 +8,7 @@ systemctl enable name.service
 ![enable](https://github.com/Markkerg/Process-1/blob/main/Assets/systemctl/enable.png?raw=true)
 
 ## ปิดใช้งาน Service
-เปิดใช้งานบริการ ป้องกันไม่ให้บริการเริ่มต้นโดยอัตโนมัติทุกครั้งที่ระบบเปิดใหม่
+ปิดใช้งานบริการ ป้องกันไม่ให้บริการเริ่มต้นโดยอัตโนมัติทุกครั้งที่ระบบเปิดใหม่
 ```
 systemctl disable name.service
 ```
