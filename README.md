@@ -164,13 +164,13 @@ Systemd เป็นระบบ init และผู้จัดการระ
 ## Systemctl
 Systemctl เป็นเครื่องมือในโหมดคอมมานด์ไลน์ที่อนุญาตให้คุณจัดการและตรวจสอบระบบ Systemd และ Service manager มันประกอบด้วยชุดคำสั่งต่างๆ ที่ใช้ในการบริหารจัดการระบบ ไลบรารี และเดมอนที่ได้ใช้แทน init daemon รุ่นก่อนหน้า (SysV) ด้วยคำสั่งต่างๆที่มีอยู่ systemctl นั้นจะเป็นเครื่องมือที่มีประโยชน์ในการบริหารจัดการ Service ของเซิร์ฟเวอร์ ทั้งให้ข้อมูลที่ละเอียดเกี่ยวกับบริการ systemd แต่ละตัวถึงบริการที่ใช้ทั่วทั้งระบบ
 ### คําสั่งหลักๆ
-- Listing Services (รายการบริการ)
-- Displaying Service Status (แสดงสถานะของบริการ)
-- Starting and Stopping Services (เริ่มและหยุดบริการ)
-- Restarting and Reloading (รีสตาร์ทและรีโหลดบริการ)
-- Enabling and Disabling Services (เปิดใช้งานและปิดใช้งานบริการ)
-- Changing a Runlevel (การเปลี่ยน Runlevel)
-- Shutting Down, Suspending, and Hibernating (การปิดเครื่อง การหลับแบบ Suspend และ Hibernation)
+- [**Listing Services**](https://github.com/Markkerg/Process-1/blob/main/Systemctl/Listing%20Services/README.md) (แสดงรายการบริการ)
+- [**Displaying Service Status**](https://github.com/Markkerg/Process-1/blob/main/Systemctl/Display%20Status/README.md) (แสดงสถานะของบริการ)
+- [**Starting and Stopping Services**](https://github.com/Markkerg/Process-1/blob/main/Systemctl/Starting%20and%20Stopping%20Services/README.md) (เริ่มและหยุดบริการ)
+- [**Restarting and Reloading**](https://github.com/Markkerg/Process-1/blob/main/Systemctl/Restarting%20and%20Reloading/README.md) (รีสตาร์ทและรีโหลดบริการ)
+- [**Enabling and Disabling Services**](https://github.com/Markkerg/Process-1/blob/main/Systemctl/Enabling%20and%20Disabling%20Services/README.md) (เปิดใช้งานและปิดใช้งานบริการ)
+- [**Changing a Runlevel**](https://github.com/Markkerg/Process-1/blob/main/Systemctl/Changing%20a%20Runlevel/README.md) (การเปลี่ยน Runlevel)
+- [**Shutting Down, Suspending, and Hibernating**](https://github.com/Markkerg/Process-1/blob/main/Systemctl/ShutDown%20Suspending%20Hibernate/README.md) (การปิดเครื่อง การหลับแบบ Suspend และ Hibernation)
 
 # Task Scheduler
 
