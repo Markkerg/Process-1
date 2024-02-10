@@ -1,11 +1,11 @@
-### แสดงรายการ Service
+## แสดงรายการ Service
 ใช้คำสั่งต่อไปนี้
 ```
 systemctl list-units --type=service
 ```
 ![list](https://www.tecmint.com/wp-content/uploads/2019/08/List-All-Services-Under-Systemd.png)
 
-### แสดงรายการ Service ที่มีสถานะที่กําหนด
+## แสดงรายการ Service ที่มีสถานะที่กําหนด
 ใช้คำสั่งต่อไปนี้
 ```
 systemctl list-units --type=service --state=STATE
@@ -19,7 +19,7 @@ systemctl list-units --type=service --state=STATE
 
 ![running](https://www.tecmint.com/wp-content/uploads/2019/08/List-Running-Services-in-Systemd.png)
 
-### หน่วยและสถานะของ systemd:
+## หน่วยและสถานะของ systemd:
 
 - **Unit (หน่วย):** หน่วยสามารถเป็นบริการ, โซเก็ต, อุปกรณ์, หรือตัวแทนอื่นๆ
 
