@@ -28,7 +28,7 @@ Boot process ของ Linux ประกอบด้วยหลายขั้
 > - [LILO  (LInux Loader)](/BootProcess/BootloaderStage/README.md#LILO)
 > - [GRUB/GRUB2 (Grand Unified Bootloader)](/BootProcess/BootloaderStage/README.md#GRUB)
 3. [**Kernel Stage:**](/BootProcess/Kernel/README.md) โปรแกรมบูตโลดเดอร์จะโหลด kernel ของระบบปฏิบัติการ Linux ลงในหน่วยความจำ (RAM) และเริ่มต้นการทำงานของ kernel ซึ่งรวมถึงการเข้าถึงทรัพยากรของเครื่องคอมพิวเตอร์ที่จำเป็นสำหรับการทำงาน
-4. **Init process:** Kernel จะเริ่มต้นกระบวนการ init ซึ่งเป็นโปรแกรมแรกที่เริ่มต้นในระบบของ Linux ในที่นี้ parent ของกระบวนการ Linux ทั้งหมดคือ Systemd ตามขั้นตอนการบูต Systemd จะดำเนินการต่างๆ
+4. [**Init process:**](/BootProcess/InitProcess/README.md) Kernel จะเริ่มต้นกระบวนการ init ซึ่งเป็นโปรแกรมแรกที่เริ่มต้นในระบบของ Linux ในที่นี้ parent ของกระบวนการ Linux ทั้งหมดคือ Systemd ตามขั้นตอนการบูต Systemd จะดำเนินการต่างๆ
 โปรแกรม init จะมี PID (Process ID) เป็น 1 และมีหน้าที่เป็นตัวควบคุมการทำงานของกระบวนการอื่นๆ ในระบบ เช่น การสร้างกระบวนการ(process) อื่นๆ และการจัดการกับบริการ(service) ต่างๆ
 6. **Runlevel/Target:** ในระบบปฏิบัติการ Linux จะมีสถานะ runlevel หรือ target เป็นตัวเลขตั้งแต่ 0-6 เพื่อระบุสถานะการทำงานของระบบ จากนั้นโปรแกรม init จะโหลดการกำหนดค่าของ runlevel หรือ target และเริ่มต้นการบริการตามที่กำหนด
 # Process Management
